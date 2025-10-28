@@ -8,10 +8,10 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="LoginPage">
 
-    <StackPanel>
-        <Label Content="Добро пожаловать"/>
-        <Label Content="Пин-код"/>
-        <TextBox Text="{Binding User.Password}"/>
-        <Button Content="Войти"/> 
+    <StackPanel VerticalAlignment="Center" >
+        <Label Content="Добро пожаловать" Style="{StaticResource LabelTitle}" />
+        <Label Content="Пин-код" Style="{StaticResource Text}"/>
+        <TextBox Text="{Binding User.Password}" Style="{StaticResource TextBoxStyle}"/>
+        <Button Content="Войти" Style="{StaticResource Button}"/> 
     </StackPanel>
 </Page>
