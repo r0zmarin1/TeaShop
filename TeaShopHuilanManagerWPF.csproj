@@ -9,9 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Classes\" />
-    <Folder Include="Models\Interfaces\" />
-    <Folder Include="Models\" />
+    <Compile Remove="Models\Classes\**" />
+    <EmbeddedResource Remove="Models\Classes\**" />
+    <None Remove="Models\Classes\**" />
+    <Page Remove="Models\Classes\**" />
   </ItemGroup>
 
 </Project>
