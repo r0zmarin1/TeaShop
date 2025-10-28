@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TeaShopHuilanManagerWPF.Models.Interfaces;
 
 namespace TeaShopHuilanManagerWPF.Models.DTO
 {
-    public class Categories : ITitlebleModel
+    public class ProductsListsDTO
     {
-        public string Title { get; set; }
-        public int Id { get; set; }
+        public int OrderId { get; set; }
+        public int ProductId { get; set; }
+        public int ProductCount { get; set; }
     }
 }
