@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TeaShopHuilanManagerWPF.Views.Windows"
         WindowState="Maximized"
-        WindowStyle="None"
-        mc:Ignorable="d"
-        WindowStartupLocation="CenterScreen">
-    <Frame x:Name="MainFrame"/>
+        WindowStyle="SingleBorderWindow"
+        mc:Ignorable="d">
+    
+    <Frame Content="{Binding Value}"/>
 </Window>
