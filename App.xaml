@@ -4,6 +4,34 @@
              xmlns:local="clr-namespace:TeaShopHuilanManagerWPF"
              StartupUri="Views/Windows/MainWindow.xaml">
     <Application.Resources>
-        
+        <Style x:Key="LabelTitle">
+            <Setter Property="Label.FontSize" Value="45"/>
+            <Setter Property="Label.FontFamily" Value="Century Gothic" />
+            <Setter Property="Label.HorizontalAlignment" Value="Center"/>
+            
+        </Style>
+        <Style x:Key="Text">
+            <Setter Property="Control.FontSize" Value="30"/>
+            <Setter Property="Control.FontFamily" Value="Century Gothic" />
+            <Setter Property="Control.HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="TextBoxStyle">
+            <Setter Property="Control.FontSize" Value="30"/>
+            <Setter Property="Control.FontFamily" Value="Century Gothic" />
+            <Setter Property="Control.HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Control.Width" Value="300"/>
+            <Setter Property="Control.Margin" Value="0 30 0 0"/>
+        </Style>
+        <Style x:Key="Button">
+            <Setter Property="Control.FontSize" Value="30"/>
+            <Setter Property="Control.FontFamily" Value="Century Gothic" />
+            <Setter Property="Control.HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Control.Width" Value="300"/>
+            <Setter Property="Control.Margin" Value="0 30 0 0"/>
+        </Style>
+        <Style x:Key="ButtonTogether">
+            <Setter Property="Control.FontSize" Value="30"/>
+            <Setter Property="Control.FontFamily" Value="Century Gothic" />
+        </Style>
     </Application.Resources>
 </Application>
