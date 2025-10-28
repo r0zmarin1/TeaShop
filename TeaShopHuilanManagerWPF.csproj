@@ -12,6 +12,7 @@
     <Folder Include="Models\Classes\" />
     <Folder Include="Models\Interfaces\" />
     <Folder Include="Views\Pages\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>
