@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeaShopHuilanManagerWPF", "TeaShopHuilanManagerWPF.csproj", "{61DAAD92-290F-4E8D-B023-D371B6349EB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeaShopHuilanDatabaseApi", "..\TeaShopHuilanDatabaseApi\TeaShopHuilanDatabaseApi.csproj", "{FEDE37B0-20CF-4ABF-A76C-59E3014817B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeaShopHuilanDatabaseApi", "..\TeaShopHuilanDatabaseApi\TeaShopHuilanDatabaseApi.csproj", "{304E2A47-A911-46EF-A69E-14DD2A3A8AE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{61DAAD92-290F-4E8D-B023-D371B6349EB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61DAAD92-290F-4E8D-B023-D371B6349EB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61DAAD92-290F-4E8D-B023-D371B6349EB2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FEDE37B0-20CF-4ABF-A76C-59E3014817B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FEDE37B0-20CF-4ABF-A76C-59E3014817B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FEDE37B0-20CF-4ABF-A76C-59E3014817B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FEDE37B0-20CF-4ABF-A76C-59E3014817B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{304E2A47-A911-46EF-A69E-14DD2A3A8AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{304E2A47-A911-46EF-A69E-14DD2A3A8AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{304E2A47-A911-46EF-A69E-14DD2A3A8AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{304E2A47-A911-46EF-A69E-14DD2A3A8AE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
