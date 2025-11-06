@@ -1,4 +1,4 @@
-﻿using TeaShopHuilanDatabaseApi.Core.Models.EfModels;
+﻿using TeaShopHuilanDatabaseApi.Core.Models.DTOs;
 
 namespace TeaShopHuilanDatabaseApi.Core.Controllers.Services
 {

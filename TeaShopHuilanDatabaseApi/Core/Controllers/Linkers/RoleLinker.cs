@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
 using TeaShopHuilanDatabaseApi.Core.Controllers.Services;
-using TeaShopHuilanDatabaseApi.Core.Models.EfModels;
+using TeaShopHuilanDatabaseApi.Core.Models.DTOs;
 
 namespace TeaShopHuilanDatabaseApi.Core.Controllers.Linkers
 {
