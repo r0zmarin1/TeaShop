@@ -8,6 +8,6 @@ namespace TeaShopHuilanManagerWPF.Models.Integrations
 {
     public static class DataBaseApiService
     {
-        public static void Negr() { }
+
     }
 }
