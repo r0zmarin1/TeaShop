@@ -1,0 +1,6 @@
+@TeaShopHuilanDatabaseApi_HostAddress = http://localhost:5120
+
+GET {{TeaShopHuilanDatabaseApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
