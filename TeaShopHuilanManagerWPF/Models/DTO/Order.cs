@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeaShopHuilanDatabaseApi.Core.Models.DTOs
+namespace TeaShopHuilanManagerWPF.Models.DTO
 {
     public class Order
     {
@@ -12,6 +12,6 @@ namespace TeaShopHuilanDatabaseApi.Core.Models.DTOs
         public int BookingId { get; set; }
         public decimal Cost { get; set; }
 
-        public Booking Booking { get; set; }
+        public virtual Booking Booking { get; set; }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeaShopHuilanDatabaseApi.Core.Models.DTOs
+namespace TeaShopHuilanManagerWPF.Models.DTO
 {
     public class Booking
     {
@@ -14,6 +14,6 @@ namespace TeaShopHuilanDatabaseApi.Core.Models.DTOs
         public int UserId { get; set; }
         public DateTime TimeStamp { get; set; }
 
-        public Table Table { get; set; }
+        public virtual Table Table { get; set; }
     }
 }

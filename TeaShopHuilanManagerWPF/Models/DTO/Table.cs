@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeaShopHuilanDatabaseApi.Core.Models.DTOs
+namespace TeaShopHuilanManagerWPF.Models.DTO
 {
     public class Table
     {
@@ -12,6 +12,6 @@ namespace TeaShopHuilanDatabaseApi.Core.Models.DTOs
         public int StatusId { get; set; }
         public int MaxPeopleCount { get; set; }
 
-        public Status Status { get; set; }
+        public virtual Status Status { get; set; }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeaShopHuilanDatabaseApi.Core.Models.DTOs
+namespace TeaShopHuilanManagerWPF.Models.DTO
 {
     public class Report 
     {
@@ -14,7 +14,7 @@ namespace TeaShopHuilanDatabaseApi.Core.Models.DTOs
         public string Path { get; set; }
         public DateTime  TimeStamp { get; set; }
 
-        public User User { get; set; }
-        public Type Type { get; set; }
+        public virtual User User { get; set; }
+        public virtual Type Type { get; set; }
     }
 }

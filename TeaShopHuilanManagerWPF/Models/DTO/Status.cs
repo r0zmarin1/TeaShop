@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeaShopHuilanDatabaseApi.Core.Models.DTOs
+namespace TeaShopHuilanManagerWPF.Models.DTO
 {
-    public class ReportType
+    public class Status
     {
         public string Title { get; set; }
         public int Id { get; set; }

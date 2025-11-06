@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeaShopHuilanDatabaseApi.Core.Models.DTOs
+namespace TeaShopHuilanManagerWPF.Models.DTO
 {
     public class User
     {
@@ -18,6 +18,6 @@ namespace TeaShopHuilanDatabaseApi.Core.Models.DTOs
         public string Password { get; set; }
         public string PhoneNumber { get; set; }
 
-        public Role Role { get; set; }
+        public virtual Role Role { get; set; }
     }
 }
