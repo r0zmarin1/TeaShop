@@ -8,7 +8,7 @@
             <Setter Property="Label.FontSize" Value="45"/>
             <Setter Property="Label.FontFamily" Value="Century Gothic" />
             <Setter Property="Label.HorizontalAlignment" Value="Center"/>
-            
+
         </Style>
         <Style x:Key="Text">
             <Setter Property="Control.FontSize" Value="30"/>
