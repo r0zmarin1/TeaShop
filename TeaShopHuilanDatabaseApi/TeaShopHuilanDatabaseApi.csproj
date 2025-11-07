@@ -20,7 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Core\Models\Persistences\" />
     <Folder Include="Core\Models\EfModels\" />
   </ItemGroup>
 

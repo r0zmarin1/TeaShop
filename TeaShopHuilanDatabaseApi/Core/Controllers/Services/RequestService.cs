@@ -1,4 +1,5 @@
-﻿using TeaShopHuilanDatabaseApi.Core.Models.DTOs;
+﻿using Microsoft.EntityFrameworkCore;
+using TeaShopHuilanDatabaseApi.Core.Models.EfModels;
 
 namespace TeaShopHuilanDatabaseApi.Core.Controllers.Services
 {
@@ -26,9 +27,85 @@ namespace TeaShopHuilanDatabaseApi.Core.Controllers.Services
 
         #region Bookings
 
-        public List<Booking> GetAllBookings()
+        public async Task<List<Booking>> GetAllBookings()
         {
-            return [.. _context.Bookings];
+            RefreshContext();
+            return [.. await _context.Bookings.ToListAsync()];
+        }
+
+        public async Task<bool> AddItem(Booking item)
+        {
+            var result = false;
+
+            RefreshContext();
+
+            if ((await _context.Bookings.FirstOrDefaultAsync(s => s.Id == item.Id)) == null)
+            {
+                await _context.Bookings.AddAsync(item);
+            }
+            else
+            {
+                return result;
+            }
+
+            await SaveContext();
+
+            if (_context.Bookings.Contains(item))
+            {
+                result = true;
+            }
+
+            return result;
+        }
+
+        public async Task<bool> UpdateItem(Booking item)
+        {
+            var result = false;
+
+            RefreshContext();
+
+            if ((await _context.Bookings.FirstOrDefaultAsync(s => s.Id == item.Id)) == null)
+            {
+                _context.Bookings.Update(item);
+            }
+            else
+            {
+                return result;
+            }
+
+            await SaveContext();
+
+            if (_context.Bookings.Contains(item))
+            {
+                result = true;
+            }
+
+            return result;
+        }
+
+        public async Task<bool> DeleteItem(Booking item)
+        {
+            var result = false;
+
+            RefreshContext();
+
+            if ((await _context.Bookings.FirstOrDefaultAsync(s => s.Id == item.Id)) == null)
+            {
+                _context.Bookings.Remove(item);
+            }
+            else
+            {
+                return result;
+            }
+
+            await SaveContext();
+
+            if (!_context.Bookings.Contains(item))
+            {
+                result = true;
+            }
+
+            return result;
         }
 
         #endregion
@@ -89,9 +166,10 @@ namespace TeaShopHuilanDatabaseApi.Core.Controllers.Services
 
         #region Roles
 
-        public List<Role> GetAllRoles()
+        public async Task<List<Role>> GetAllRoles()
         {
-            return [.. _context.Roles];
+            RefreshContext();
+            return [.. await _context.Roles.ToListAsync()];
         }
 
         #endregion

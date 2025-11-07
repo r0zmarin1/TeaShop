@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Mvc;
-using TeaShopHuilanDatabaseApi.Core.Controllers.Services;
+﻿using TeaShopHuilanDatabaseApi.Core.Controllers.Services;
 using TeaShopHuilanDatabaseApi.Core.Models.DTOs;
 
 namespace TeaShopHuilanDatabaseApi.Core.Controllers.Linkers
@@ -9,9 +7,10 @@ namespace TeaShopHuilanDatabaseApi.Core.Controllers.Linkers
     {
         private RequestService _requester = RequestService.Instance;
 
-        public List<Role> GetAllRoles()
+        public async Task<List<Role>> GetAllRoles()
         { 
-            return _requester.GetAllRoles();
+            var items =  await _requester.GetAllRoles();
+            return await ModelsConverterService.FromEfToPdo(items);
         }
     }
 }
