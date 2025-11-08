@@ -31,10 +31,11 @@
         </StackPanel>
         <StackPanel Grid.Row="1">
             <Label Content="Отчеты" Style="{StaticResource LabelTitle}"/>
+           
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Row="2"  >
-            <Button Content="По столам" Style="{StaticResource ButtonTogether}" />
-            <Button Content="По официантам" Style="{StaticResource ButtonTogether}"/>
+            <Button Content="По столам" Style="{StaticResource ButtonTogether}" Click="TablesButton"/>
+            <Button Content="По официантам" Style="{StaticResource ButtonTogether}" Click="WaitersButton"/>
         </StackPanel>
     </Grid>
 </Page>

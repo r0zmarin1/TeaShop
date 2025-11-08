@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace TeaShopHuilanManagerWPF.Views.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для EmployeePage.xaml
+    /// Логика взаимодействия для TablesPage.xaml
     /// </summary>
-    public partial class EmployeePage : Page
+    public partial class TablesPage : Page
     {
-        public EmployeePage()
+        public TablesPage()
         {
             InitializeComponent();
-        }
-
-        private void TablesButton(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void WaitersButton(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
