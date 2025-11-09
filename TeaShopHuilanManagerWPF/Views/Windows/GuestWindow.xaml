@@ -1,0 +1,21 @@
+﻿<Window x:Class="TeaShopHuilanManagerWPF.Views.Windows.GuestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TeaShopHuilanManagerWPF.Views.Windows"
+        mc:Ignorable="d"
+        Title="GuestWindow" Height="350" Width="450">
+    <Grid VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="Количество гостей"  Style="{StaticResource LabelTitle}"/>
+        <TextBox Text="rfrfrf" Style="{StaticResource TextBoxStyle}" Grid.Row="1"/>
+        <Button Grid.Row="2" Content="Продолжить" Style="{StaticResource Button}"/>
+    </Grid>
+        
+    
+</Window>
