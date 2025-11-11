@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:TeaShopHuilanManagerWPF.Views.Windows"
         mc:Ignorable="d"
         Title="PaymentWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel VerticalAlignment="Center">
+        <Button Content="Наличными" Style="{StaticResource Button}" Click="CashPayment"/>
+        <Button Content="Картой" Style="{StaticResource Button}" Click="CardPayment" />
+        <Button Content="Баллами" Style="{StaticResource Button}" Click="BonusesPayment"/>
+    </StackPanel>
 </Window>

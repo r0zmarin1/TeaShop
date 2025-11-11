@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TeaShopHuilanManagerWPF.Views.Windows"
         mc:Ignorable="d"
         Title="FindGuestWindow" Height="450" Width="800">
-    <StackPanel>
+    <StackPanel VerticalAlignment="Center">
         <Label Content="Пользователь" Style="{StaticResource LabelTitle}"/>
         <TextBox Text="" Style="{StaticResource TextBoxStyle}" />
         <ListBox>

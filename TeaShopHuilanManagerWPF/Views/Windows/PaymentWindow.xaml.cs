@@ -28,5 +28,15 @@ namespace TeaShopHuilanManagerWPF.Views.Windows
         {
 
         }
+
+        private void BonusesPayment(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CashPayment(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
