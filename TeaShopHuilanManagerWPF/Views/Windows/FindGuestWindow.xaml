@@ -8,6 +8,7 @@
         Title="FindGuestWindow" Height="450" Width="800">
     <StackPanel>
         <Label Content="Пользователь" Style="{StaticResource LabelTitle}"/>
+        <TextBox Text="" Style="{StaticResource TextBoxStyle}" />
         <ListBox>
             <ListBox.ItemTemplate>
                 <DataTemplate>

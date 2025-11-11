@@ -11,9 +11,9 @@
 
         </Style>
         <Style x:Key="Text">
-            <Setter Property="Control.FontSize" Value="30"/>
+            <Setter Property="Control.FontSize" Value="20"/>
             <Setter Property="Control.FontFamily" Value="Century Gothic" />
-            <Setter Property="Control.HorizontalAlignment" Value="Center"/>
+            <Setter Property="Control.HorizontalAlignment" Value="Left"/>
         </Style>
         <Style x:Key="TextBoxStyle">
             <Setter Property="Control.FontSize" Value="30"/>

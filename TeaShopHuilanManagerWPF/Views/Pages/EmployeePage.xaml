@@ -16,23 +16,23 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Vertical" Grid.ColumnSpan="2">
+        <StackPanel Orientation="Vertical" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Left">
             <StackPanel Orientation="Horizontal" Style="{StaticResource Text}">
                 <Label Content="Сотрудник:"/>
                 <Label Content="fdujgnkjgunr"/>
                 <Label Content="kmkmrkfvkdf"/>
                 <Label Content="kmgtkmrgikgjtjjjj"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal"  >
-                <Label Content="Смена открыта в 43:88" Style="{StaticResource Text}" HorizontalContentAlignment="Left"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Смена открыта в 43:88" Style="{StaticResource Text}"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.Row="1">
             <Label Content="Отчеты" Style="{StaticResource LabelTitle}"/>
         </StackPanel>
-        <StackPanel Orientation="Vertical" Grid.Row="2"  >
+        <StackPanel Orientation="Vertical" Grid.Row="2" VerticalAlignment="Bottom" >
             <Button Content="По столам" Style="{StaticResource ButtonTogether}" />
             <Button Content="По официантам" Style="{StaticResource ButtonTogether}"/>
         </StackPanel>
