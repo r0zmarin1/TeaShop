@@ -15,19 +15,21 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="70"/>
-            <RowDefinition  Height="40"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition  Height="80"/>
         </Grid.RowDefinitions>
         <StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Label Content="Официант" />
-                <Label Content="Иванов И.И" />
-                <Label Content="Стол" />
-                <Label Content="434" />
-                <Label Content="Гостей" />
-                <Label Content="4" />
+                <Label Content="Официант" Style="{StaticResource Text}"/>
+                <Label Content="Иванов И.И" Style="{StaticResource Text}"/>
+                <Label Content="Стол" Style="{StaticResource Text}"/>
+                <Label Content="434" Style="{StaticResource Text}" />
             </StackPanel>
-            <Label Content="Заказ"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Гостей" Style="{StaticResource Text}"/>
+                <Label Content="4" Style="{StaticResource Text}" />
+            </StackPanel>
+            <Label Content="Заказ" Style="{StaticResource Text}"/>
             <ListBox>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -36,9 +38,9 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="1" >
-            <Label Content="Сумма:" Style="{StaticResource LabelTitle}" FontSize="25"/>
-            <Label Content="45454545"  Style="{StaticResource LabelTitle}" FontSize="25"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Style="{StaticResource Text}"  VerticalAlignment="Center">
+            <Label Content="Сумма:" />
+            <Label Content="45454545"/>
         </StackPanel>
         <StackPanel Grid.Row="2">
             <Grid>
@@ -51,14 +53,14 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Button Content="+" Click="AddOneMore"/>
-                <Button Content="-" Grid.Row="1" Click="DeleteOneItem"/>
-                <Button Content="🙍‍" Grid.RowSpan="2" Grid.Column="1" Click="BindGuest"/>
-                <Button Content="%" Grid.RowSpan="2" Grid.Column="2" Click="AddDiscount"/>
+                <Button Content="+" Click="AddOneMore"  Style="{StaticResource ButtonTogether}"/>
+                <Button Content="-" Grid.Row="1" Click="DeleteOneItem"  Style="{StaticResource ButtonTogether}"/>
+                <Button Content="🙍‍" Grid.RowSpan="2" Grid.Column="1" Click="BindGuest"  Style="{StaticResource ButtonTogether}"/>
+                <Button Content="%" Grid.RowSpan="2" Grid.Column="2" Click="AddDiscount"  Style="{StaticResource ButtonTogether}"/>
             </Grid>
         </StackPanel>
         <StackPanel Grid.Column="1">
-            <Label Content="Поиск"/>
+            <Label Content="Поиск" Style="{StaticResource Text}"/>
             <TextBox Text=""/>
             <ListBox>
                 <ListBox.ItemTemplate>
@@ -68,8 +70,8 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </StackPanel>
-        <Button Grid.Column="1" Grid.Row="1" Content="Пречек" Click="MakePrecheck"/>
-        <Button Grid.Column="1" Grid.Row="2" Content="Оплата" Click="MakePayment"/>
+        <Button Grid.Column="1" Grid.Row="1" Content="Пречек" Click="MakePrecheck" Style="{StaticResource ButtonTogether}"/>
+        <Button Grid.Column="1" Grid.Row="2" Content="Оплата" Click="MakePayment"  Style="{StaticResource ButtonTogether}"/>
 
     </Grid>
 </Page>

@@ -10,7 +10,7 @@
 
     <StackPanel VerticalAlignment="Center" >
         <Label Content="Добро пожаловать" Style="{StaticResource LabelTitle}" />
-        <Label Content="Пин-код" Style="{StaticResource Text}"/>
+        <Label Content="Пин-код" Style="{StaticResource Text}" HorizontalAlignment="Center"/>
         <TextBox Text="{Binding User.Password}" Style="{StaticResource TextBoxStyle}"/>
         <Button Content="Войти" Style="{StaticResource Button}"/> 
     </StackPanel>
