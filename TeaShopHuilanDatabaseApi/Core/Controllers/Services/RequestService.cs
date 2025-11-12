@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using TeaShopHuilanDatabaseApi.Core.Models.EfModels;
+﻿using TeaShopHuilanDatabaseApi.Core.Models.EfModels;
 
 namespace TeaShopHuilanDatabaseApi.Core.Controllers.Services
 {
