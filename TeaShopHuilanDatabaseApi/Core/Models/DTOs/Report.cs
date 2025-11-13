@@ -15,6 +15,6 @@ namespace TeaShopHuilanDatabaseApi.Core.Models.DTOs
         public DateTime  TimeStamp { get; set; }
 
         public User User { get; set; }
-        public Type Type { get; set; }
+        public ReportType Type { get; set; }
     }
 }

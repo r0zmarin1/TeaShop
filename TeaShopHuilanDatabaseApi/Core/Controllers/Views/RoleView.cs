@@ -17,9 +17,9 @@ namespace TeaShopHuilanDatabaseApi.Core.Controllers.Views
         }
 
         [HttpGet("GetAll")]
-        public List<Role> GetRoles()
+        public async Task<List<Role>> GetRoles()
         {
-            return _linker.GetAllRoles();
+            return await _linker.GetAllRoles();
         }
     }
 }
