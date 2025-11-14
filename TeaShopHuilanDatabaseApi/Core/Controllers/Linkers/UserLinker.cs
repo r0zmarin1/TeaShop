@@ -1,38 +1,92 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TeaShopHuilanDatabaseApi.Core.Controllers.Services;
 using TeaShopHuilanDatabaseApi.Core.Models.DTOs;
 
 namespace TeaShopHuilanDatabaseApi.Core.Controllers.Linkers
 {
     public class UserLinker
     {
-        internal async Task<bool> AddItem(User item)
+        private RequestService _requester = RequestService.Instance;
+
+        public async Task<bool> AddItem(User item)
         {
-            throw new NotImplementedException();
+            var result = false;
+
+            if (!ValidationService.CheckValidness(item))
+            {
+                return result;
+            }
+
+            var convertedValue = await ModelsConverterService.FromPdoToEf(item);
+            result = await _requester.AddItem(convertedValue);
+
+            return result;
         }
 
-        internal async Task<bool> Blockuser(User item)
+        public async Task<bool> Blockuser(User item)
         {
-            throw new NotImplementedException();
+            var result = false;
+
+            if (!ValidationService.CheckValidness(item))
+            {
+                return result;
+            }
+
+            var convertedValue = await ModelsConverterService.FromPdoToEf(item);
+            result = await _requester.BlockUser(convertedValue);
+
+            return result;
         }
 
-        internal async Task<bool> DeleteItem(User item)
+        public async Task<bool> DeleteItem(User item)
         {
-            throw new NotImplementedException();
+            var result = false;
+
+            if (!ValidationService.CheckValidness(item))
+            {
+                return result;
+            }
+
+            var convertedValue = await ModelsConverterService.FromPdoToEf(item);
+            result = await _requester.DeleteItem(convertedValue);
+
+            return result;
         }
 
-        internal async Task<List<User>> GetAllUsers()
+        public async Task<List<User>> GetAllUsers()
         {
-            throw new NotImplementedException();
+            var items = await _requester.GetAllUsers();
+            return await ModelsConverterService.FromEfToPdo(items);
         }
 
-        internal async Task<bool> PutItem(User item)
+        public async Task<bool> PutItem(User item)
         {
-            throw new NotImplementedException();
+            var result = false;
+
+            if (!ValidationService.CheckValidness(item))
+            {
+                return result;
+            }
+
+            var convertedValue = await ModelsConverterService.FromPdoToEf(item);
+            result = await _requester.UpdateItem(convertedValue);
+
+            return result;
         }
 
-        internal async Task<bool> UnBlockUser(User item)
+        public async Task<bool> UnBlockUser(User item)
         {
-            throw new NotImplementedException();
+            var result = false;
+
+            if (!ValidationService.CheckValidness(item))
+            {
+                return result;
+            }
+
+            var convertedValue = await ModelsConverterService.FromPdoToEf(item);
+            result = await _requester.UnBlockUser(convertedValue);
+
+            return result;
         }
     }
 }

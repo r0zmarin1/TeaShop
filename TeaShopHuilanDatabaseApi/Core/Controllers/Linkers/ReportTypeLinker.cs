@@ -1,28 +1,62 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TeaShopHuilanDatabaseApi.Core.Controllers.Services;
 using TeaShopHuilanDatabaseApi.Core.Models.DTOs;
 
 namespace TeaShopHuilanDatabaseApi.Core.Controllers.Linkers
 {
     public class ReportTypeLinker
     {
-        internal async Task<bool> AddItem(ReportType item)
+        private RequestService _requester = RequestService.Instance;
+
+        public async Task<bool> AddItem(ReportType item)
         {
-            throw new NotImplementedException();
+            var result = false;
+
+            if (!ValidationService.CheckValidness(item))
+            {
+                return result;
+            }
+
+            var convertedValue = await ModelsConverterService.FromPdoToEf(item);
+            result = await _requester.AddItem(convertedValue);
+
+            return result;
         }
 
-        internal async Task<bool> DeleteItem(ReportType item)
+        public async Task<bool> DeleteItem(ReportType item)
         {
-            throw new NotImplementedException();
+            var result = false;
+
+            if (!ValidationService.CheckValidness(item))
+            {
+                return result;
+            }
+
+            var convertedValue = await ModelsConverterService.FromPdoToEf(item);
+            result = await _requester.DeleteItem(convertedValue);
+
+            return result;
         }
 
-        internal async Task<List<ReportType>> GetAllReportTypes()
+        public async Task<List<ReportType>> GetAllReportTypes()
         {
-            throw new NotImplementedException();
+            var items = await _requester.GetAllReportTypes();
+            return await ModelsConverterService.FromEfToPdo(items);
         }
 
-        internal async Task<bool> PutItem(ReportType item)
+        public async Task<bool> PutItem(ReportType item)
         {
-            throw new NotImplementedException();
+            var result = false;
+
+            if (!ValidationService.CheckValidness(item))
+            {
+                return result;
+            }
+
+            var convertedValue = await ModelsConverterService.FromPdoToEf(item);
+            result = await _requester.UpdateItem(convertedValue);
+
+            return result;
         }
     }
 }
