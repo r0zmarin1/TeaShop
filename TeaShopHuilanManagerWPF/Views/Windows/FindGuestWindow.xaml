@@ -1,0 +1,21 @@
+﻿<Window x:Class="TeaShopHuilanManagerWPF.Views.Windows.FindGuestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TeaShopHuilanManagerWPF.Views.Windows"
+        mc:Ignorable="d"
+        Title="FindGuestWindow" Height="450" Width="800">
+    <StackPanel VerticalAlignment="Center">
+        <Label Content="Пользователь" Style="{StaticResource LabelTitle}"/>
+        <TextBox Text="" Style="{StaticResource TextBoxStyle}" />
+        <ListBox>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Content="Поиск" Style="{StaticResource Button}"/>
+    </StackPanel>
+</Window>

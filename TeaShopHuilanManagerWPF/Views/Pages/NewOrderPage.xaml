@@ -1,0 +1,77 @@
+﻿<Page x:Class="TeaShopHuilanManagerWPF.Views.Pages.NewOrderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TeaShopHuilanManagerWPF.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="NewOrderPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="80"/>
+            <RowDefinition  Height="80"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Официант" Style="{StaticResource Text}"/>
+                <Label Content="Иванов И.И" Style="{StaticResource Text}"/>
+                <Label Content="Стол" Style="{StaticResource Text}"/>
+                <Label Content="434" Style="{StaticResource Text}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Гостей" Style="{StaticResource Text}"/>
+                <Label Content="4" Style="{StaticResource Text}" />
+            </StackPanel>
+            <Label Content="Заказ" Style="{StaticResource Text}"/>
+            <ListBox>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Style="{StaticResource Text}"  VerticalAlignment="Center">
+            <Label Content="Сумма:" />
+            <Label Content="45454545"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button Content="+" Click="AddOneMore"  Style="{StaticResource ButtonTogether}"/>
+                <Button Content="-" Grid.Row="1" Click="DeleteOneItem"  Style="{StaticResource ButtonTogether}"/>
+                <Button Content="🙍‍" Grid.RowSpan="2" Grid.Column="1" Click="BindGuest"  Style="{StaticResource ButtonTogether}"/>
+                <Button Content="%" Grid.RowSpan="2" Grid.Column="2" Click="AddDiscount"  Style="{StaticResource ButtonTogether}"/>
+            </Grid>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Label Content="Поиск" Style="{StaticResource Text}"/>
+            <TextBox Text=""/>
+            <ListBox>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <Button Grid.Column="1" Grid.Row="1" Content="Пречек" Click="MakePrecheck" Style="{StaticResource ButtonTogether}"/>
+        <Button Grid.Column="1" Grid.Row="2" Content="Оплата" Click="MakePayment"  Style="{StaticResource ButtonTogether}"/>
+
+    </Grid>
+</Page>

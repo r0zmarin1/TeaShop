@@ -14,6 +14,21 @@ namespace TeaShopHuilanDatabaseApi.Core.Controllers.Linkers
             return await ModelsConverterService.FromEfToPdo(items);
         }
 
+        internal async Task<bool> AddItem(Booking item)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal async Task<bool> DeleteItem(Booking item)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal async Task<bool> PutItem(Booking item)
+        {
+            throw new NotImplementedException();
+        }
+
         /*
         public async Task<bool> AddItem(Booking item)
         {
