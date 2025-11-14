@@ -25,6 +25,21 @@ namespace TeaShopHuilanDatabaseApi.Core.Controllers.Services
             await _context.SaveChangesAsync();
         }
 
+        #region Authorization
+
+        public async Task<User> Authorize(User user)
+        {
+            RefreshContext();
+
+            var result = await _context.Users.FirstOrDefaultAsync(i => i.Password == user.Password);
+
+            if (result is not null)
+                return result;
+            return null;
+        }
+
+        #endregion
+
         #region Bookings
 
         public async Task<List<Booking>> GetAllBookings()
