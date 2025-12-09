@@ -46,7 +46,7 @@ namespace TeaShopHuilanDatabaseApi.Core.Controllers.Views
             return result;
         }
 
-        [HttpDelete("DeleteItem")]
+        [HttpDelete("DeleteItem/{item}")]
         public async Task<ActionResult<bool>> DeleteItem(Booking item)
         {
             var result = await _linker.DeleteItem(item);

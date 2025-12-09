@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR.Protocol;
 using TeaShopHuilanDatabaseApi.Core.Controllers.Services;
 using TeaShopHuilanDatabaseApi.Core.Models.DTOs;
 
@@ -55,6 +56,14 @@ namespace TeaShopHuilanDatabaseApi.Core.Controllers.Linkers
 
             var convertedValue = await ModelsConverterService.FromPdoToEf(item);
             result = await _requester.UpdateItem(convertedValue);
+
+            return result;
+        }
+
+        public async Task<ActionResult<byte[]>> GetContent(int id)
+        {
+            var path = await _requester.GetAllReportById(id);
+            var result = await ReporterService.GetContent(path);
 
             return result;
         }

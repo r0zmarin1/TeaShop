@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Reflection.Metadata.Ecma335;
 using TeaShopHuilanDatabaseApi.Core.Models.EfModels;
 
 namespace TeaShopHuilanDatabaseApi.Core.Controllers.Services
@@ -471,6 +472,19 @@ namespace TeaShopHuilanDatabaseApi.Core.Controllers.Services
         {
             RefreshContext();
             return [.. await _context.Reports.ToListAsync()];
+        }
+
+        public async Task<string> GetAllReportById(int id)
+        { 
+            RefreshContext();
+            var reports = await GetAllReports();
+
+            var result =  reports.FirstOrDefault(s=> s.Id == id);
+
+            if (result == null)
+                return default;
+
+            return result.Path;
         }
 
         public async Task<bool> AddItem(Report item)
