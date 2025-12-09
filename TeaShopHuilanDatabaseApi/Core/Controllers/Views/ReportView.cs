@@ -26,6 +26,16 @@ namespace TeaShopHuilanDatabaseApi.Core.Controllers.Views
             return result;
         }
 
+        [HttpGet("GetData/{id}")]
+        public async Task<ActionResult<byte[]>> GetReportData(int id)
+        {
+            var result = await _linker.GetContent(id);
+            if (result == null)
+                return NoContent();
+
+            return result;
+        }
+
         [HttpPost("AddItem")]
         public async Task<ActionResult<bool>> AddItem(Report item)
         {
@@ -46,7 +56,7 @@ namespace TeaShopHuilanDatabaseApi.Core.Controllers.Views
             return result;
         }
 
-        [HttpDelete("DeleteItem")]
+        [HttpDelete("DeleteItem/{item}")]
         public async Task<ActionResult<bool>> DeleteItem(Report item)
         {
             var result = await _linker.DeleteItem(item);

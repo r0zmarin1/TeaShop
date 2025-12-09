@@ -24,5 +24,6 @@ namespace TeaShopHuilanManagerWPF.Views.Pages
         {
             InitializeComponent();
         }
+
     }
 }
