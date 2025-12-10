@@ -26,7 +26,7 @@ namespace TeaShopHuilanManagerWPF.Views.Windows
         {
             InitializeComponent();
             DataContext = this;
-            SetPage(new LoginPage());
+            SetPage(new LoginPage(this));
         }
 
         public void SetPage(Page value)
